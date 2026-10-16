@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 void exerc() {
@@ -8,24 +8,15 @@ void exerc() {
     printf("연도와 월 입력 (예: 2024 2) : ");
     scanf("%d %d", &year, &month);
 
-    /*
-    [10번]
-    1~12월 중 하나를 입력받아
-    switch-case로 해당 월의 일 수를 구하는 부분
-    */
+    // [10번] switch-case를 이용한 월별 일 수 계산
     switch (month) {
     case 2:
-
-        /*
-        [12번]
-        10번 문제에서 2월을 윤년 여부에 따라
-        28일 또는 29일로 구분하도록 확장한 부분
-        */
+        // [12번] 2월은 윤년 여부에 따라 28일 또는 29일
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            days = 29;  // 윤년
+            days = 29;
         }
         else {
-            days = 28;  // 평년
+            days = 28;
         }
         break;
 
@@ -34,9 +25,14 @@ void exerc() {
         days = 30;
         break;
 
-    default:
+    case 1: case 3: case 5: case 7:
+    case 8: case 10: case 12:
         days = 31;
         break;
+
+    default:
+        printf("잘못된 월입니다. 1~12 사이의 값을 입력하세요.\n");
+        return;
     }
 
     printf("%d년 %d월은 %d일까지 있습니다.\n", year, month, days);
