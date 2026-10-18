@@ -9,7 +9,7 @@ C언어 강의 과제 제출 저장소
 | 3 | 초를 시/분/초로 변환 | `main3.c` |
 | 4 | 합격 여부 판별 | `main3.c` |
 | 5 | EXEC 권한 추가 | `main3.c` |
-| 6 | 윤년 판별 프로그램 (if-else) | `if-else if.c` |
+| 6 | 윤년 판별 프로그램 (if-else-if) | `if-else if.c` |
 | 7 | 금액을 화폐 단위로 분해 | `won.c` |
 | 8 | 성적 가중평균 | `main4.c` |
 | 9 | BMI 계산 | `main4.c` |
